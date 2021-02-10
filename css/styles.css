@@ -19,3 +19,9 @@ h3 {
   padding-top: 5vw;
   padding-bottom: 5vw;
 }
+
+@media screen and (max-width: 600px) {
+  .parallax-container {
+    height: 25vh;
+  }
+}
