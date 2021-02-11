@@ -10,3 +10,11 @@ const parallaxInstances = M.Parallax.init(parallaxes);
 
 const tabs = document.querySelectorAll(".tabs");
 const tabInstances = M.Tabs.init(tabs);
+
+const datepicker = document.querySelector(".datepicker");
+const datepickerInstance = M.Datepicker.init(datepicker, {
+  format: "dd mmm, yyyy",
+  firstDay: 1,
+  minDate: new Date(),
+  yearRange: 1,
+});
