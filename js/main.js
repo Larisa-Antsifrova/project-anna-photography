@@ -18,3 +18,6 @@ const datepickerInstance = M.Datepicker.init(datepicker, {
   minDate: new Date(),
   yearRange: 1,
 });
+
+const scrollspySections = document.querySelectorAll(".scrollspy");
+const scrollSpyInstances = M.ScrollSpy.init(scrollspySections, { scrollOffset: 0 });
