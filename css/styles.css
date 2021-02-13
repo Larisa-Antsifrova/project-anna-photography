@@ -41,3 +41,24 @@ nav i {
     font-size: 1.5rem;
   }
 }
+
+.sidenav .sidenav-social-link {
+  /* outline: 1px solid tomato; */
+  padding: 0;
+  text-align: center;
+  border-radius: 50%;
+  width: 48px;
+}
+
+.sidenav .sidenav-social-link .fab {
+  margin: 0;
+  float: none;
+}
+
+.sidenav-social-links-block {
+  margin-top: 10px;
+}
+
+.sidenav .sidenav-social-link-item {
+  padding: 0;
+}
