@@ -29,3 +29,15 @@ h3 {
 nav i {
   height: 45px;
 }
+
+@media screen and (max-width: 405px) {
+  nav .brand-logo {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  nav .brand-logo {
+    font-size: 1.5rem;
+  }
+}
