@@ -21,3 +21,6 @@ const datepickerInstance = M.Datepicker.init(datepicker, {
 
 const scrollspySections = document.querySelectorAll(".scrollspy");
 const scrollSpyInstances = M.ScrollSpy.init(scrollspySections, { scrollOffset: 0 });
+
+const carousel = document.querySelector(".carousel");
+const carouselInstance = M.Carousel.init(carousel, { fullWidth: true, indicators: true });
