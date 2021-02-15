@@ -1,3 +1,4 @@
+/* Styles for header */
 header {
   background: url("../images/hero.jpg");
   background-size: cover;
@@ -10,6 +11,44 @@ header {
     min-height: 50vh;
   }
 }
+
+@media screen and (max-width: 405px) {
+  nav .brand-logo {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  nav .brand-logo {
+    font-size: 1.5rem;
+  }
+}
+
+nav i {
+  height: 45px;
+}
+
+.sidenav .sidenav-social-link {
+  padding: 0;
+  text-align: center;
+  border-radius: 50%;
+  width: 48px;
+}
+
+.sidenav .sidenav-social-link .fab {
+  margin: 0;
+  float: none;
+}
+
+.sidenav-social-links-block {
+  margin-top: 10px;
+}
+
+.sidenav .sidenav-social-link-item {
+  padding: 0;
+}
+
+/* Styles for main */
 
 h3 {
   margin: 1.1rem 0 1.1rem 0;
@@ -24,21 +63,23 @@ h3 {
   .parallax-container {
     height: 25vh;
   }
-}
 
-nav i {
-  height: 45px;
-}
-
-@media screen and (max-width: 405px) {
-  nav .brand-logo {
-    font-size: 1.7rem;
+  .section {
+    padding-top: 8vw;
   }
 }
 
-@media screen and (max-width: 330px) {
-  nav .brand-logo {
-    font-size: 1.5rem;
+.row {
+  margin-bottom: 0;
+}
+
+.row .col {
+  padding: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .my-callig-column {
+    margin-bottom: 2vh;
   }
 }
 
