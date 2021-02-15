@@ -23,4 +23,4 @@ const scrollspySections = document.querySelectorAll(".scrollspy");
 const scrollSpyInstances = M.ScrollSpy.init(scrollspySections, { scrollOffset: 0 });
 
 const carousel = document.querySelector(".carousel");
-const carouselInstance = M.Carousel.init(carousel, { fullWidth: true, indicators: true, padding: 20 });
+const carouselInstance = M.Carousel.init(carousel, { fullWidth: true, indicators: true });
