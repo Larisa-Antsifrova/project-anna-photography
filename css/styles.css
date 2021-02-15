@@ -1,3 +1,4 @@
+/* Styles for header */
 header {
   background: url("../images/hero.jpg");
   background-size: cover;
@@ -9,25 +10,6 @@ header {
   header {
     min-height: 50vh;
   }
-}
-
-h3 {
-  margin: 1.1rem 0 1.1rem 0;
-}
-
-.section {
-  padding-top: 5vw;
-  padding-bottom: 5vw;
-}
-
-@media screen and (max-width: 600px) {
-  .parallax-container {
-    height: 25vh;
-  }
-}
-
-nav i {
-  height: 45px;
 }
 
 @media screen and (max-width: 405px) {
@@ -42,8 +24,11 @@ nav i {
   }
 }
 
+nav i {
+  height: 45px;
+}
+
 .sidenav .sidenav-social-link {
-  /* outline: 1px solid tomato; */
   padding: 0;
   text-align: center;
   border-radius: 50%;
@@ -60,5 +45,34 @@ nav i {
 }
 
 .sidenav .sidenav-social-link-item {
+  padding: 0;
+}
+
+/* Styles for main */
+
+h3 {
+  margin: 1.1rem 0 1.1rem 0;
+}
+
+.section {
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+@media screen and (max-width: 600px) {
+  .parallax-container {
+    height: 25vh;
+  }
+
+  .section {
+    padding-top: 8vw;
+  }
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.row .col {
   padding: 0;
 }
