@@ -85,7 +85,11 @@ nav i {
 }
 
 /* Styles for slider */
+/* Helpers */
+/* #portfolio {
+  background-color: grey;
+}
 
 .carousel {
-  height: 60vh;
-}
+  outline: 2px solid tomato;
+} */
