@@ -76,3 +76,9 @@ h3 {
 .row .col {
   padding: 0;
 }
+
+@media screen and (max-width: 992px) {
+  .my-callig-column {
+    margin-bottom: 2vh;
+  }
+}
