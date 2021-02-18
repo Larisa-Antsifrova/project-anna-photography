@@ -85,12 +85,8 @@ nav i {
   }
 }
 
-/* Styles for slider */
-/* Helpers */
-/* #portfolio {
-  background-color: grey;
+@media screen and (min-width: 420px) and (max-width: 992px), (min-width: 1110px) {
+  .tabs .tab a {
+    font-size: 20px;
+  }
 }
-
-.carousel {
-  outline: 2px solid tomato;
-} */
