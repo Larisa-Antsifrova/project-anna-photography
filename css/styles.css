@@ -57,8 +57,8 @@ nav i {
 /* Styles for main */
 
 .section {
-  padding-top: 4vw;
-  padding-bottom: 4vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
 }
 
 @media screen and (max-width: 600px) {
