@@ -99,3 +99,7 @@ nav i {
 .material-tooltip {
   background-color: tomato;
 }
+
+.margin-right-for-icon {
+  margin-right: 7px;
+}
