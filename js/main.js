@@ -24,3 +24,11 @@ const scrollSpyInstances = M.ScrollSpy.init(scrollspySections, { scrollOffset: 0
 
 const carousel = document.querySelector(".carousel");
 const carouselInstance = M.Carousel.init(carousel, { fullWidth: true, indicators: true });
+
+const tooltipped = document.querySelectorAll(".tooltipped");
+const tooltippedInstances = M.Tooltip.init(tooltipped, {
+  enterDelay: 0,
+  margin: -5,
+  inDuration: 250,
+  outDuration: 100,
+});

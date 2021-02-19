@@ -95,3 +95,7 @@ nav i {
 .margin-bottomless {
   margin-bottom: 0;
 }
+
+.material-tooltip {
+  background-color: tomato;
+}
