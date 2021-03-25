@@ -147,3 +147,24 @@ nav {
 nav li {
   letter-spacing: 0.01em;
 }
+
+/* создаем добавляем стили кнокпи вверх */
+.back__to__top {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 1;
+  background-color: #e91e63;
+  cursor: pointer;
+
+  display: none;
+
+  &:hover {
+    background-color: #e91e63;
+  }
+}
+
+/* показываем кнопку при выполнении скрипта */
+.back__to__top-show {
+  display: block;
+}
