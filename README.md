@@ -2,5 +2,9 @@
 
 ## Presentation web page for Anna Sobetska.
 
-Photographer. Videographer.
-Kyiv, Ukraine.
+- :camera: Photographer. 
+
+- :movie_camera: Videographer.
+
+
+:earth_americas: Kyiv, Ukraine.
