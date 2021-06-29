@@ -16,11 +16,16 @@ const tabInstances = M.Tabs.init(tabs);
 
 // Initializing scrollspy
 const scrollspySections = document.querySelectorAll(".scrollspy");
-const scrollSpyInstances = M.ScrollSpy.init(scrollspySections, { scrollOffset: 0 });
+const scrollSpyInstances = M.ScrollSpy.init(scrollspySections, {
+  scrollOffset: 0,
+});
 
 // Initializing slider
 const carousel = document.querySelector(".carousel");
-const carouselInstance = M.Carousel.init(carousel, { fullWidth: true, indicators: true });
+const carouselInstance = M.Carousel.init(carousel, {
+  fullWidth: true,
+  indicators: true,
+});
 
 // Initializing tooltips
 const tooltipped = document.querySelectorAll(".tooltipped");
@@ -32,10 +37,10 @@ const tooltippedInstances = M.Tooltip.init(tooltipped, {
 });
 
 // Initializing daypicker. Commented till better times
-// const datepicker = document.querySelector(".datepicker");
-// const datepickerInstance = M.Datepicker.init(datepicker, {
-//   format: "dd mmm, yyyy",
-//   firstDay: 1,
-//   minDate: new Date(),
-//   yearRange: 1,
-// });
+const datepicker = document.querySelector(".datepicker");
+const datepickerInstance = M.Datepicker.init(datepicker, {
+  format: "dd mmmm, yyyy",
+  firstDay: 1,
+  minDate: new Date(),
+  yearRange: 1,
+});

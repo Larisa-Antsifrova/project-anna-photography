@@ -9,7 +9,16 @@ header {
   background: url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav li {
+  letter-spacing: 0.01em;
 }
 
 @media screen and (max-width: 670px) {
@@ -82,7 +91,8 @@ nav i {
   }
 }
 
-@media screen and (min-width: 420px) and (max-width: 992px), (min-width: 1110px) {
+@media screen and (min-width: 420px) and (max-width: 992px),
+  (min-width: 1110px) {
   .tabs .tab a {
     font-size: 20px;
   }
@@ -104,67 +114,32 @@ nav i {
   margin-right: 7px;
 }
 
-/* Section Divider */
-.divider-wrapper {
-  padding-top: 5vh;
-  padding-bottom: 15vh;
+.input-field .prefix {
+  color: #9e9e9e;
 }
 
-.section-divider {
-  position: relative;
-  height: 1px;
+[type="checkbox"] + span:not(.lever):before,
+[type="checkbox"]:not(.filled-in) + span:not(.lever):after {
+  border: 2px solid #9e9e9e;
 }
 
-.div-transparent:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 5%;
-  right: 5%;
-  width: 90%;
-  height: 1px;
-  background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
-}
-
-.div-dot:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: -9px;
-  left: calc(50% - 9px);
-  width: 18px;
-  height: 18px;
-  background-color: #2e7d32;
-  border: 1px solid rgb(48, 49, 51);
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 2px white, 0 0 0 4px white;
-}
-
-nav {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-nav li {
-  letter-spacing: 0.01em;
-}
-
-/* создаем добавляем стили кнокпи вверх */
-.back__to__top {
+/* UP button */
+.back-to-top {
   position: fixed;
   bottom: 40px;
   right: 20px;
   z-index: 1;
-  background-color: #e91e63;
+  background-color: rgba(238, 110, 115, 0.7);
   cursor: pointer;
 
   display: none;
+}
 
-  &:hover {
-    background-color: #e91e63;
-  }
+.back-to-top:hover {
+  background-color: #ee6e73;
 }
 
 /* показываем кнопку при выполнении скрипта */
-.back__to__top-show {
+.back-to-top--show {
   display: block;
 }
