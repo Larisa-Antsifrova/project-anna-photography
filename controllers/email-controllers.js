@@ -4,7 +4,7 @@ const sendEmail = async (req, res, next) => {
   try {
     const { email } = req.body;
 
-    await EmailService.sendEmail(email);
+    await EmailService.sendEmail();
 
     return res.json({ message: "Email sent" });
   } catch (error) {

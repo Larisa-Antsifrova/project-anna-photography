@@ -1,28 +1,23 @@
-const nodemailer = require("nodemailer");
+const sgMail = require("@sendgrid/mail");
 require("dotenv").config();
 
-async function sendEmail(email) {
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+async function sendEmail() {
   try {
-    const config = {
-      host: process.env.NODEMAILER_HOST,
-      port: process.env.NODEMAILER_PORT,
-      secure: true,
-      auth: {
-        user: process.env.NODEMAILER_SENDER,
-        pass: process.env.NODEMAILER_PASSWORD,
-      },
+    const msg = {
+      to: process.env.FEEDBACK_RECIPIENT,
+      from: `${process.env.SENDGRID_SENDER_NAME} <${process.env.SENDGRID_SENDER}>`,
+      subject: "You've got main from Anna Photography",
+      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
     };
 
-    const transporter = nodemailer.createTransport(config);
+    await sgMail.send(msg);
 
-    return await transporter.sendMail({
-      from: `Anna Photography <${process.env.NODEMAILER_SENDER}>`,
-      to: email,
-      subject: "You have got mail from Anna Photography",
-      html: "<b>Anna Photography</b>",
-    });
+    console.log("Email sent");
   } catch (error) {
-    console.log(error.message);
+    console.log("Error in sendEmail: ", error);
   }
 }
+
 module.exports = { sendEmail };
