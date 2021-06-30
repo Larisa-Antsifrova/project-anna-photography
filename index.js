@@ -1,4 +1,5 @@
 const express = require("express");
+const helmet = require("helmet");
 const path = require("path");
 const emailRouter = require("./routes/email-routes");
 require("dotenv").config();
@@ -6,6 +7,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+app.use(helmet());
 
 app.use(express.json());
 
