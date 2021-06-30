@@ -1,4 +1,5 @@
 const Joi = require("joi");
+const { HttpCodes } = require("../helpers/constants");
 
 const validateRequest = Joi.object({
   name: Joi.string().trim().min(2).max(30).required(),
@@ -15,7 +16,7 @@ const validate = async (schema, request, next) => {
     next();
   } catch (error) {
     next({
-      status: 400,
+      status: HttpCodes.BAD_REQUEST,
       message: error.message.replace(/"/g, ""),
     });
   }
