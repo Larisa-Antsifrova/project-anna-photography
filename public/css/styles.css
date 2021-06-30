@@ -142,3 +142,31 @@ nav i {
 .back-to-top--show {
   display: block;
 }
+
+/* 404 page */
+
+.not-found-page {
+  background-image: url("../images/09-slider.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.pnf-title {
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 500px) {
+  .pnf-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 650px) {
+  .pnf-title {
+    font-size: 3.2rem;
+  }
+}

@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const emailRouter = require("./routes/email-routes");
 require("dotenv").config();
 
@@ -13,7 +14,7 @@ app.use(express.static("public"));
 app.use(emailRouter);
 
 app.use((req, res) => {
-  res.status(404).json({ status: "error", code: 404, message: "Not found" });
+  res.status(404).sendFile(path.join(__dirname, "public", "404.html"));
 });
 
 app.use((err, req, res, next) => {
