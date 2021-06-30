@@ -324,7 +324,9 @@
                 perferendis molestiae voluptatum, asperiores consequuntur ex?
               </p>
               <p class="margin-topless">
-                <a href="tel:+380000000000" class="valign-wrapper"
+                <a
+                  href="tel:+380000000000"
+                  class="valign-wrapper teal-text text-lighten-1"
                   ><i class="material-icons tiny margin-right-for-icon"
                     >phone_iphone</i
                   >
@@ -334,7 +336,7 @@
               <p class="margin-topless">
                 <a
                   href="mailto:anna.sobetska@anna.sobetska"
-                  class="valign-wrapper"
+                  class="valign-wrapper teal-text text-lighten-1"
                   ><i class="material-icons tiny margin-right-for-icon"
                     >email</i
                   >
@@ -350,7 +352,7 @@
                   href="https://www.facebook.com/profile.php?id=100069295024194"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class=""
+                  class="teal-text text-lighten-1"
                   ><i class="fab fa-facebook margin-right-for-icon"></i
                   >Facebook</a
                 >
@@ -360,7 +362,7 @@
                   href="https://www.instagram.com/sobetska_photo/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class=""
+                  class="teal-text text-lighten-1"
                   ><i class="fab fa-instagram margin-right-for-icon"></i
                   >Instagram</a
                 >
@@ -372,10 +374,10 @@
             </div>
             <div class="col s12 l6 offset-l1">
               <!-- Feedback form till better times :) -->
-              <form action="#">
+              <form id="feedback-form">
                 <div class="input-field margin-topless">
                   <i class="material-icons prefix">email</i>
-                  <input type="email" id="email" />
+                  <input type="email" id="email" name="email" required />
                   <label for="email">Your e-mail</label>
                 </div>
                 <div class="input-field">
@@ -384,31 +386,39 @@
                   <textarea
                     id="message"
                     class="materialize-textarea"
+                    name="message"
                   ></textarea>
                   <label for="message">Your message</label>
                 </div>
                 <div class="input-field">
                   <i class="material-icons prefix">date_range</i>
-                  <input type="text" id="date" class="datepicker" />
+                  <input type="text" id="date" class="datepicker" name="date" />
                   <label for="date">Choose a date</label>
                 </div>
                 <div class="input-field">
                   <p>Required services</p>
                   <p>
                     <label>
-                      <input type="checkbox" />
+                      <input type="checkbox" name="photo" />
                       <span>Photography</span>
                     </label>
                   </p>
                   <p>
                     <label>
-                      <input type="checkbox" />
+                      <input type="checkbox" name="video" />
                       <span>Video</span>
                     </label>
                   </p>
                 </div>
                 <div class="input-field center">
-                  <button class="btn">Submit</button>
+                  <button
+                    id="feedback-btn"
+                    class="btn"
+                    type="submit"
+                    name="button"
+                  >
+                    Submit
+                  </button>
                 </div>
               </form>
             </div>
@@ -446,6 +456,7 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/feedback.js"></script>
     <script src="./js/upButton.js"></script>
   </body>
 </html>
