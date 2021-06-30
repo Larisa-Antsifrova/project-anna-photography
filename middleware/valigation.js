@@ -2,9 +2,9 @@ const Joi = require("joi");
 const { HttpCodes } = require("../helpers/constants");
 
 const validateRequest = Joi.object({
-  name: Joi.string().trim().min(2).max(30).required(),
+  name: Joi.string().min(2).max(30).required(),
   email: Joi.string().email().required(),
-  message: Joi.string().trim().min(2).required(),
+  message: Joi.string().min(2).required(),
   date: Joi.string().optional(),
   photo: Joi.boolean().optional(),
   video: Joi.boolean().optional(),
