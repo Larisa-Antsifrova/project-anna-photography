@@ -378,7 +378,13 @@
               <form id="feedback-form">
                 <div class="input-field margin-topless">
                   <i class="material-icons prefix required-field">person</i>
-                  <input type="text" id="name" name="name" required />
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    minlength="2"
+                  />
                   <label for="name">Your name</label>
                 </div>
                 <div class="input-field margin-topless">
@@ -423,6 +429,7 @@
                     class="btn"
                     type="submit"
                     name="button"
+                    disabled
                   >
                     Submit
                   </button>

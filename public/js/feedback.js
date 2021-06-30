@@ -2,7 +2,25 @@ const feedbackFormRef = document.getElementById("feedback-form");
 const feedbackBtnRef = document.getElementById("feedback-btn");
 const notificationRef = document.getElementById("notification");
 
+const nameInputRef = document.getElementById("name");
+const emailInputRef = document.getElementById("email");
+const messageInputRef = document.getElementById("message");
+
 feedbackFormRef.addEventListener("submit", handleFeedbackSubmit);
+feedbackFormRef.addEventListener("input", handleInputChange);
+
+function handleInputChange() {
+  if (
+    nameInputRef.validity.valid &&
+    emailInputRef.validity.valid &&
+    messageInputRef.validity.valid
+  ) {
+    enableButton(feedbackBtnRef);
+    return;
+  }
+
+  disableButton(feedbackBtnRef);
+}
 
 async function handleFeedbackSubmit(event) {
   event.preventDefault();
@@ -19,7 +37,7 @@ async function handleFeedbackSubmit(event) {
   console.log(requestBody);
 
   try {
-    await fetch("http://localhost:8888/email", {
+    await fetch("https://anna-sobetska.herokuapp.com/email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,6 +46,7 @@ async function handleFeedbackSubmit(event) {
     });
 
     feedbackFormRef.reset();
+    disableButton(feedbackBtnRef);
     showNotification(notificationRef);
   } catch (error) {
     console.log(error.message);
@@ -46,5 +65,5 @@ function enableButton(buttonRef) {
 }
 
 function disableButton(buttonRef) {
-  buttonRef.addAttribute("disabled");
+  buttonRef.setAttribute("disabled", "");
 }
