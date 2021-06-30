@@ -12,13 +12,17 @@ const mailGenerator = new Mailgen({
   },
 });
 
-function createEmailBody({ email, message, date, photo, video }) {
+function createEmailBody({ name, email, message, date, photo, video }) {
   const emailBody = {
     body: {
       name: process.env.FEEDBACK_RECIPIENT_NAME,
       intro: "Here is a new request:",
       table: {
         data: [
+          {
+            what: "Name",
+            description: name,
+          },
           {
             what: "Reply to",
             description: email,

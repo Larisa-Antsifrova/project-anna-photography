@@ -3,12 +3,29 @@ const feedbackBtnRef = document.getElementById("feedback-btn");
 
 feedbackFormRef.addEventListener("submit", handleFeedbackSubmit);
 
-function handleFeedbackSubmit(event) {
+async function handleFeedbackSubmit(event) {
   event.preventDefault();
-  console.dir(event.target.elements.email.value);
-  console.dir(event.target.elements.date.value);
-  console.dir(event.target.elements.message.value);
-  console.dir(event.target.elements.photo.checked);
-  console.dir(event.target.elements.video.checked);
-  console.dir(event.target.elements.button);
+
+  const requestBody = {
+    name: event.target.elements.name.value,
+    email: event.target.elements.email.value,
+    message: event.target.elements.message.value,
+    date: event.target.elements.date.value,
+    photo: event.target.elements.photo.checked,
+    video: event.target.elements.video.checked,
+  };
+
+  try {
+    await fetch("http://localhost:8888/email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    feedbackFormRef.reset();
+  } catch (error) {
+    console.log(error.message);
+  }
 }
