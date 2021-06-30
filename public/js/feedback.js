@@ -34,8 +34,6 @@ async function handleFeedbackSubmit(event) {
     video: event.target.elements.video.checked,
   };
 
-  console.log(requestBody);
-
   try {
     await fetch("https://anna-sobetska.herokuapp.com/email", {
       method: "POST",
