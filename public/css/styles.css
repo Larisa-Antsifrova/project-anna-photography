@@ -23,6 +23,7 @@ nav li {
 
 button {
   color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
 }
 
 @media screen and (max-width: 405px) {
