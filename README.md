@@ -7,3 +7,7 @@
 :movie_camera: Videographer.
 
 :earth_americas: Kyiv, Ukraine.
+
+## Status: Work in progress
+
+:pencil: Copy writer's work is needed :)
